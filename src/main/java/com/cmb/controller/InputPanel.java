@@ -15,6 +15,7 @@ public class InputPanel extends JPanel{
     public InputPanel(){
         Dimension dimension = getPreferredSize();
         dimension.width = 250;
+        dimension.height=500;
         setPreferredSize(dimension);
 
         Dimension dimension1 = nameField.getPreferredSize();
@@ -41,10 +42,12 @@ public class InputPanel extends JPanel{
         gc.fill = GridBagConstraints.NONE;
 
         gc.anchor = GridBagConstraints.LINE_START;
+        gc.insets = new Insets(0,0,0,5);
         add(name, gc);
 
         gc.gridx = 1;
         gc.gridy = 0;
+        gc.insets = gc.insets = new Insets(0,0,0,0);
         gc.anchor = GridBagConstraints.LINE_START;
         add(nameField, gc);
 
@@ -55,22 +58,25 @@ public class InputPanel extends JPanel{
 
         gc.gridx = 0;
         gc.gridy = 1;
+        gc.insets = new Insets(0,0,0,5);
         gc.anchor = GridBagConstraints.LINE_START;
         add(phoneNumber, gc);
 
         gc.gridx = 1;
         gc.gridy = 1;
+        gc.insets = new Insets(0,0,0,0);
         gc.anchor = GridBagConstraints.LINE_START;
         add(phoneNumberField, gc);
 
-        //
+        //third row
+
         gc.weightx = 1;
         gc.weighty = 2.0;
 
         gc.gridx = 2;
         gc.gridy = 1;
         gc.anchor = GridBagConstraints.FIRST_LINE_END;
-        add(saveButton, gc);
+//        add(saveButton, gc);
 
 
     }
